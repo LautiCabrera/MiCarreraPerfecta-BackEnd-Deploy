@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PreferenceWordsKeyRepository extends JpaRepository<PreferenceWordsKey, Integer>{
     
-    @Query(value = "SELECT DISTINCT pwk.id_word_key FROM PreferenceWordsKey pwk WHERE pwk.id_preference IN :preferenceIds ORDER BY RAND() LIMIT 10")
+    @Query(value = "SELECT DISTINCT pwk.id_word_key FROM PreferenceWordsKey pwk WHERE pwk.id_preference IN :preferenceIds ORDER BY RAND()")
     List<Integer> getKeywordIdsForPreferences(@Param("preferenceIds") List<Integer> preferenceIds);
     
 }

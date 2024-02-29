@@ -57,10 +57,15 @@ public class ImplementPreferenceService {
 
     // Función para obtener hasta 10 palabras clave aleatorias relacionadas con las preferencias seleccionadas
     public List<Integer> getTopKeywords(List<Integer> filteredPreferences) {
-        // Obtener hasta 10 IDs de palabras clave aleatorias para las preferencias filtradas
+        // Obtener todas las IDs de palabras clave relacionadas con las preferencias filtradas
         List<Integer> keywordIds = preferenceWordsKeyRepository.getKeywordIdsForPreferences(filteredPreferences);
+        
+        // Revolver la lista de IDs para obtener una selección aleatoria
+        Collections.shuffle(keywordIds);
 
-        return keywordIds;
+        // Limitar la lista a 10 elementos o al tamaño de la lista, lo que sea menor
+        int limit = Math.min(keywordIds.size(), 10);
+        return keywordIds.subList(0, limit);
     }
 
 }

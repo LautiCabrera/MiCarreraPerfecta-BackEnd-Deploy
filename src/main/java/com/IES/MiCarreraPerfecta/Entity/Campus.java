@@ -1,8 +1,8 @@
 package com.IES.MiCarreraPerfecta.Entity;
 
-import jakarta.validation.constraints.NotNull;
-import jakarta.persistence.*;
-import lombok.Getter;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import lombok.*;
 
 @Getter
 @Entity

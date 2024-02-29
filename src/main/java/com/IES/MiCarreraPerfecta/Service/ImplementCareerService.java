@@ -62,15 +62,21 @@ public class ImplementCareerService {
     
     // Obtiene una duración de meses
     public List<Integer> getDuration(int duration) {
-        return switch (duration) {
-            case 0 -> Arrays.asList(10);
-            case 1 -> Arrays.asList(18, 24);
-            case 2 -> Arrays.asList(30, 32, 36);
-            case 3 -> Arrays.asList(48, 54, 57);
-            case 4 -> Arrays.asList(60, 66, 72);
-            case 5 -> Arrays.asList(10,18,24,30,32,36,48,54,57,60, 66, 72);
-            default -> new ArrayList<>();
-        };
+        if (duration == 0) {
+            return Arrays.asList(10);
+        } else if (duration == 1) {
+            return Arrays.asList(18, 24);
+        } else if (duration == 2) {
+            return Arrays.asList(30, 32, 36);
+        } else if (duration == 3) {
+            return Arrays.asList(48, 54, 57);
+        } else if (duration == 4) {
+            return Arrays.asList(60, 66, 72);
+        } else if (duration == 5) {
+            return Arrays.asList(10,18,24,30,32,36,48,54,57,60, 66, 72);
+        } else {
+            return new ArrayList<>();
+        }
     }
     
     // Filtra las carreras de modalidad en base a la duración
