@@ -1,0 +1,5 @@
+#surefire_0
+#Thu Feb 29 12:34:38 ART 2024
+basedir=/home/prueba/Documentos/GitHub/MiCarreraPerfecta-BackEnd-Deploy
+maven.ext.class.path=/snap/netbeans/93/netbeans/java/maven-nblib/netbeans-eventspy.jar
+localRepository=/home/prueba/.m2/repository
