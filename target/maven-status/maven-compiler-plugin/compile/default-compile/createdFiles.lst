@@ -17,6 +17,7 @@ com/IES/MiCarreraPerfecta/Entity/Branch.class
 com/IES/MiCarreraPerfecta/Service/ImplementCampusService.class
 com/IES/MiCarreraPerfecta/Service/ImplementResultService.class
 com/IES/MiCarreraPerfecta/Entity/Intelligences.class
+Config/ApplicationPropertiesConfig.class
 com/IES/MiCarreraPerfecta/Controller/IntelligencesController.class
 com/IES/MiCarreraPerfecta/Security/Controller/Mensaje.class
 com/IES/MiCarreraPerfecta/Entity/Career.class

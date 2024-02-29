@@ -25,6 +25,7 @@
 /home/prueba/Documentos/GitHub/MiCarreraPerfecta-BackEnd-Deploy/src/main/java/com/IES/MiCarreraPerfecta/Utils/EncryptorGenerator.java
 /home/prueba/Documentos/GitHub/MiCarreraPerfecta-BackEnd-Deploy/src/main/java/com/IES/MiCarreraPerfecta/Service/ImplementResultService.java
 /home/prueba/Documentos/GitHub/MiCarreraPerfecta-BackEnd-Deploy/src/main/java/com/IES/MiCarreraPerfecta/Controller/BranchController.java
+/home/prueba/Documentos/GitHub/MiCarreraPerfecta-BackEnd-Deploy/src/main/java/Config/ApplicationPropertiesConfig.java
 /home/prueba/Documentos/GitHub/MiCarreraPerfecta-BackEnd-Deploy/src/main/java/com/IES/MiCarreraPerfecta/Controller/IntelligencesController.java
 /home/prueba/Documentos/GitHub/MiCarreraPerfecta-BackEnd-Deploy/src/main/java/com/IES/MiCarreraPerfecta/Repository/CampusRepository.java
 /home/prueba/Documentos/GitHub/MiCarreraPerfecta-BackEnd-Deploy/src/main/java/com/IES/MiCarreraPerfecta/Entity/Intelligences.java
