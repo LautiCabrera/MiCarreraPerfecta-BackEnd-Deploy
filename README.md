@@ -10,13 +10,13 @@ Este repositorio corresponde al proyecto final desarrollado para rendir y acredi
 
 ## ⚙ Versionado de la aplicación ⚙
 
-- **Java Version**: 1.8.
+- **Java**: 1.8.
 - **JDK**: Openjdk-8-jdk.
 - **Spring Boot**: 2.7.9.
 
 ![Spring Boot](https://miro.medium.com/v2/resize:fit:1400/1*aXe6MaOyhdIP5WqdPHhSFw.png)
 
-## ⚠ Dependencias utilizadas ⚠
+## ⚠️ Dependencias utilizadas ⚠️
 
 Las dependencias incluidas en el proyecto son las siguientes:
 
@@ -46,25 +46,58 @@ Las dependencias incluidas en el proyecto son las siguientes:
 
 ## 🌐 Endpoints de la API 🌐
 
-### Intelligences
+  URL general para crear los endpoints ➡️ https://micarreraperfecta-backend-deploy.onrender.com
+
+### ↪️ Intelligences
 
 | Métodos | Rutas                                    | Acciones                                            |
 |---------|------------------------------------------|-----------------------------------------------------|
-| POST    | /intelligencesFilter/procesar-respuestas | Almacena lista de inteligencias.                    |
+| POST    | /intelligencesFilter/procesar-respuestas | Almacena lista de inteligencias y ubicación.        |
 
-### Preference
+#### 📬 Ejemplo y formato para la solicitud:
+
+- La solicitud debe ser un objeto JSON que contiene una lista de enteros correspondiente a las inteligencias y una lista de doubles correspondientes a las coordenadas (esta última puede ser lista vacía).
+
+```json
+{
+  "intelligenceResponse": [3, 4, 3, 4, 2, 3, 5, 2],
+  "locationResponse": [-32.89134856649449, -68.87343906166964]
+}
+````
+
+### ↪️ Preference
 
 | Métodos | Rutas                                    | Acciones                                            |
 |---------|------------------------------------------|-----------------------------------------------------|
 | POST    | /preferenceFilter/procesar-respuestas    | Retorna una lista de ramas de estudio.              |
 
-### Branch
+#### 📬 Ejemplo y formato para la solicitud:
+
+- La solicitud debe ser un objeto JSON que contiene una lista de booleanos correspondientes a las preferencias.
+
+```json
+{
+    "responses":[true, false, false, true, false, true, true, true, false, false]
+}
+````
+
+### ↪️ Branch
 
 | Métodos | Rutas                                    | Acciones                                            |
 |---------|------------------------------------------|-----------------------------------------------------|
 | POST    | /branchFilter/procesar-respuestas        | Almacena lista de ramas de estudio.                 |
 
-### Career
+#### 📬 Ejemplo y formato para la solicitud:
+
+- La solicitud debe ser un objeto JSON que contiene una lista de booleanos correspondientes a las ramas.
+
+```json
+{
+    "responses": [true, false, true, true, false, true]
+}
+````
+
+### ↪️ Career
 
 | Métodos | Rutas                                                              | Acciones                                                  |
 |---------|--------------------------------------------------------------------|-----------------------------------------------------------|
@@ -72,14 +105,40 @@ Las dependencias incluidas en el proyecto son las siguientes:
 | GET     | /branchFilter/obtener-carrera-perfecta/{encryptedCareerId}         | Retorna un objeto con la informacion de una carrera.      |
 | POST    | /branchFilter/busqueda-carrera                                     | Retorna una lista de objetos con informacion de carreras. |
 
+#### 📬 Ejemplo y formato para la solicitud POST /procesar-respuestas:
+
+- La solicitud debe ser una lista JSON que contiene enteros correspondientes al tipo, modalidad y duración.
+
+```json
+[1, 2, 4]
+````
+
+- La respuesta obtenida "encryptedCareerId" irá en la url de la solicitud GET /obtener-carrera-perfecta/{encryptedCareerId}
+
+#### 📬 Ejemplo y formato para la solicitud POST /busqueda-carrera:
+
+- La solicitud debe ser un texto que contenga el título o palabra relacionada a la carrera.
+
+```text
+Medicina
+````
+
+### 📭 Códigos de estado HTTP:
+
+- 200 OK: La solicitud se procesó correctamente.
+- 400 Bad Request: La solicitud no pudo ser procesada debido a datos incorrectos o malformados.
+
+## 💼 Repositorio del Front 💼
+
+- <a href="https://github.com/LautiCabrera/MiCarreraPerfecta-FrontEnd" target="_blank">MiCarreraPerfecta-FrontEnd</a>
 
 ## 📱 Demo V1.0 📲 
 
-# [MiCarreraPerfecta](https://mi-carrera-perfecta-front-end.vercel.app/)
+- <a href="https://mi-carrera-perfecta-front-end.vercel.app/" target="_blank">MiCarreraPerfecta-Demo</a>
 
 ## 👨‍💻 Autor 👨‍💻
 
-- [@LautiCabrera](https://github.com/LautiCabrera)
+- <a href="https://github.com/LautiCabrera" target="_blank">@LautiCabrera</a>
 
 ## ✨ Contribución ✨
 
